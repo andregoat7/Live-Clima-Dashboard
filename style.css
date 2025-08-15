@@ -1,0 +1,116 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- CARD PRINCIPAL --- */
+#card-clima {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+#card-clima:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+/* --- BUSCA --- */
+#container-busca {
+    display: flex;
+    margin-bottom: 30px;
+}
+#input-cidade {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #e2ebf0;
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+#input-cidade:focus {
+    border-color: #007bff;
+}
+#botao-buscar {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+#botao-buscar:hover {
+    background-color: #0056b3;
+}
+
+/* --- CLIMA ATUAL --- */
+#info-clima {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espaço entre o ícone e o texto */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f2f5;
+}
+.clima-atual-texto h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+}
+.clima-atual-texto .temperatura {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #333;
+}
+.clima-atual-texto .detalhes {
+    font-size: 16px;
+    color: #666;
+    text-transform: capitalize;
+}
+.clima-atual-icone {
+    width: 100px;
+    height: 100px;
+}
+
+/* --- PREVISÃO 5 DIAS --- */
+#container-previsao {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.dia-previsao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Espaço entre os elementos de cada dia */
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+.dia-previsao:hover {
+    background-color: #f0f2f5;
+}
+.dia-previsao p {
+    font-size: 16px;
+    margin: 0;
+}
+.dia-previsao img {
+    width: 50px;
+    height: 50px;
+}
