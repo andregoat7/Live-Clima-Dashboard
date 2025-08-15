@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         containerPrevisao.innerHTML = '';
         
         try {
-            // PRIMEIRO, descobrimos o nome do local e o estado
+            //  local e o estado
             const infoGeo = await buscarInfoGeograficaReversa(lat, lon);
             const { state } = infoGeo;
 
-            // AGORA, buscamos o clima e a previsão
+            //  clima e a previsão
             const [dadosClimaAtual, dadosPrevisao] = await Promise.all([
                 buscarClimaPorCoordenadas(lat, lon),
                 buscarPrevisaoPorCoordenadas(lat, lon)
@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Event Listeners
     botaoBuscar.addEventListener('click', () => {
         const cidade = inputCidade.value.trim();
         if (cidade) { 

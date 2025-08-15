@@ -14,7 +14,7 @@ async function buscarInfoGeografica(cidadeQuery) {
     }
 }
 
-// NOVO: Converte coordenadas (lat, lon) em dados geográficos (cidade, estado)
+// Converte coordenadas (lat, lon) em dados geográficos (cidade, estado)
 async function buscarInfoGeograficaReversa(lat, lon) {
     try {
         const chaveAPI = "7023fe0be8d92a64dceae34b3cd4dd5d";
